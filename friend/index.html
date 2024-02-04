@@ -295,7 +295,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yeshang.top/friend/index.html" data-id="cls73qe6z000294m2hfsockvc" data-title="友情链接" class="article-share-link">分享</a>
+      <a data-url="http://yeshang.top/friend/index.html" data-id="cls74bz4300009gm272r005at" data-title="友情链接" class="article-share-link">分享</a>
+      
+        <a href="/friend/index.html#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/friend/" itemprop="commentCount"></span>
+          留言
+        </a>
       
       
       
@@ -310,6 +315,8 @@
 
   
 </article>
+
+  <section id="comments" class="vcomment"></section>
 
 
 
@@ -529,6 +536,33 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/valine@1.5.1/dist/Valine.min.js" data-pjax></script>
+
+  <script data-pjax>
+    var GUEST_INFO = ['nick', 'mail', 'link'];
+    var guest_info = 'nick,mail,link'.split(',').filter((item) => {
+      return GUEST_INFO.indexOf(item) > -1
+    });
+    var recordIP = JSON.parse('true');
+    var highlight = JSON.parse('true');
+    var visitor = JSON.parse('false');
+
+    new Valine({
+      el: '.vcomment',
+      appId: "eXiWfrooA2K0yD4BYvKqSbqY-gzGzoHsz",
+      appKey: "it9dfC1VFvmbtAkpQoC1W9zS",
+      placeholder: "Just go go",
+      pageSize: '10',
+      avatar: 'mp',
+      lang: 'zh-cn',
+      recordIP: recordIP,
+      highlight: highlight,
+      visitor: visitor,
+      path: window.location.pathname
+    });
+  </script>
 
 
 
